@@ -1,2 +1,4 @@
 # webdesign
-Cloning login page of website using HTML,CSS for mobile screen according to Figma Template 
+
+Cloning login page of website and making responsive
+Using HTML,CSS for mobile screen according to Figma Template 
