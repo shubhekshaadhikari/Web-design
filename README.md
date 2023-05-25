@@ -1,4 +1,6 @@
 # webdesign
 
-Cloning login page of website and making responsive.
-Using HTML,CSS for mobile screen according to Figma Template 
+Building login page, signup page and admin dashboard of website.
+With the help of figma template design
+Using HTML,CSS as tech stack
+Responsive for mobile, tablet and desktop screen. 
