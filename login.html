@@ -4,66 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log in</title>
+    <link rel="shortcut icon" href="image/logo-img.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/util.css">
     <link rel="stylesheet" href="./css/color.css">
-    <link rel="stylesheet" href="./css/login-desktop.css">
-    <link rel="stylesheet" href="./css/login-mobile.css">
+    <link rel="stylesheet" href="./css/loginstyle.css">
+    <link rel="stylesheet" href="./css/fontawesome/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="nav-bar">
         <nav class="nav-container">
-            <section class="nav-logo">
-                <section class="nav-logo-img">
-                    <img src="./image/logo-img.svg">
+            <section class="nav-content">
+                <section class="nav-logo">
+                    <section class="nav-logo-img">
+                        <img src="./image/logo-img.svg">
+                    </section>
+                    <h1>UnitedUI</h1>
                 </section>
-                <h1>UnitedUI</h1>
+                <section class="nav-menu">
+                    <a href="#" class="nav-btn">Home</a>
+                    <a href="#" class="nav-btn">Products<i class="fa-solid fa-angle-down"></i></a>
+                    <a href="#" class="nav-btn">Resources<i class="fa-solid fa-angle-down"></i></a>
+                    <a href="#" class="nav-btn">Pricing</a>
+                </section>
             </section>
-            <section class="nav-menu">
-                <img src="./image/hamburger-icon.svg">
+            <section class="nav-side-menu">
+                <section class="sidemenu-list">
+                    <a href="#" class="nav-side-btn">Log in</a>
+                    <a href="./signup.html" class="nav-side-btn" id="purple">Sign up</a>
+                </section>
+                <section class="sidemenu-img">
+                    <img src="./image/hamburger-icon.svg">
+                </section>
             </section>
         </nav>
     </header>
-    <main class="login-box">
+
+
+    
+    <main class="main-box">
         <section class="login-container">
-            <section class="login-head">
+            <section class="login-header">
                 <section class="login-head-img">
                     <img src="./image/logo-img.svg">
                 </section>
-                <section class="login-head-text">
-                    <h1>Login into your account</h1>
+                <section class="login-head-wrap">
+                    <h1>Log in to your account</h1>
                     <p>Welcome back! Please enter your details</p>
                 </section>
             </section>
             <section class="login-body">
-                <form>
-                    <section class="input-field">
+                <form class="login-form">
+                    <section class="input-group">
                         <label for="email">Email</label>
-                        <input type="email" placeholder="    Enter your email" class="btn">
+                        <input type="email" placeholder="Enter your email" class="input-field">
                     </section>
-                    <section class="input-field">
+                    <section class="input-group">
                         <label for="password">Password</label>
-                        <input type="password" placeholder="   ........" class="btn">
+                        <input type="password" placeholder="" class="input-field">
                     </section>
-                    <section class="row">
+                </form>
+                <section class="row">
+                    <div>
                         <input type="checkbox">
                         <label for="remember">Remember for 30 days</label>
-                        <a href="#">Forget Password</a> 
-                    </section>                 
-                </form>
+                    </div>
+                    <a href="#">Forget Password</a> 
+                </section>                 
+                <section class="login-action">
+                    <a href="./signup.html" class="signin btn">Sign in</a>
+                    <a href="#" class="signsocial btn"><img src="./image/google-icon.svg" alt=""> Sign in with Google</a>
+                </section>
             </section>
-            <section class="login-action">
-                <button class="signin btn">Sign in</button>
-                <button class="signgoogle btn">Sign in with Google</button>
-            </section>
-             <section class="row footerrow">
-                <p>Don't have an account?<a href="#">Sign up</a></p>
+             <section class="footer-row">
+                <p>Don't have an account? <a href="./signup.html">Sign up</a></p>
              </section>       
         </section>
     </main>
-    
 </body>
 </html>
