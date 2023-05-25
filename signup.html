@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="shortcut icon" href="image/logo-img.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/util.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/signupstyle.css">
+    <link rel="stylesheet" href="./css/fontawesome/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="nav-bar">
+        <nav class="nav-container">
+            <section class="nav-content">
+                <section class="nav-logo">
+                    <section class="nav-logo-img">
+                        <img src="./image/logo-img.svg">
+                    </section>
+                    <h1>United UI</h1>
+                </section>
+                <section class="nav-menu">
+                    <a href="#" class="nav-btn">Home</a>
+                    <a href="#" class="nav-btn">Products<i class="fa-solid fa-angle-down"></i></a>
+                    <a href="#" class="nav-btn">Resources<i class="fa-solid fa-angle-down"></i></a>
+                    <a href="#" class="nav-btn">Pricing</a>
+                </section>
+            </section>
+            <section class="nav-side-menu">
+                <section class="sidemenu-list">
+                    <a href="./login.html" class="nav-side-btn">Log in</a>
+                    <a href="./signup.html" class="nav-side-btn" id="purple">Sign up</a>
+                </section>
+                <section class="sidemenu-img">
+                    <img src="./image/hamburger-icon.svg">
+                </section>
+            </section>
+        </nav>
+    </header>
+    <main class="main-box">
+        <section class="login-container">
+            <section class="signup-header">
+                <section class="login-head-img">
+                    <img src="./image/logo-img.svg">
+                </section>
+                <section class="signup-head-wrap">
+                    <h1>Sign up</h1>
+                    <p>Start your 30-day free trial.</p>
+                </section>
+            </section>
+            <section class="login-body">
+                <form class="login-form">
+                    <section class="input-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" placeholder="Enter your first name" class="input-field">
+                    </section>
+                    <section class="input-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" placeholder="Enter your last name" class="input-field">
+                    </section>
+                    <section class="input-group">
+                        <label for="username">Username *</label>
+                        <input type="text" placeholder="Enter your username" class="input-field">
+                    </section>
+                    <section class="input-group">
+                        <label for="email">Email *</label>
+                        <input type="email" placeholder="name@example.com" class="input-field">
+                    </section>
+                    <section class="input-group">
+                        <label for="password">Password *</label>
+                        <input type="password" placeholder="........" class="input-field">
+                    </section>
+                    <section class="input-group">
+                        <label for="password">Confirm Password *</label>
+                        <input type="password" placeholder="........" class="input-field">
+                    </section>
+                    <section class="input-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" class="input-field">
+                    </section>
+                    <section class="input-radio">
+                        <label for="gender">Gender</label>
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Female</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Male</label>
+                        <input type="radio" name="gender" id="other">
+                        <label for="other">Others</label>
+                    </section>
+                    <section class="input-group">
+                        <label for="city">Select City</label>
+                        <select name="city" id="city" class="input-field">
+                            <option value="0">Kathmandu</option>
+                            <option value="1">Lalitpur</option>
+                            <option value="2">Bhaktapur</option>
+                            <option value="3">Pokhara</option>
+                            <option value="4">Nepalgunj</option>
+                        </select>
+                    </section>
+                    <section>
+                        <label for="textarea">Description</label>
+                        <textarea rows="7" cols="47" placeholder="Enter your text here...."></textarea>
+                    </section>
+                </form>             
+                <section class="login-action">
+                    <a href="#" class="signin btn">Create Account</a>
+                    <a href="#" class="signsocial btn"><img src="./image/google-icon.svg" alt=""> Sign up with Google</a>
+                </section>
+            </section>
+             <section class="footer-row">
+                <p>Already have an account? <a href="./login.html">Log in</a></p>
+             </section>       
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+
