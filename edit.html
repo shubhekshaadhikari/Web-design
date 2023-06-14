@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="shortcut icon" href="image/logo-img.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/util.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/settingsresponse.css">
+    <link rel="stylesheet" href="./css/fontawesome/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="side-bar">
+        <section class="sidebar-content">
+            <section class="side-icon">
+                <figure>
+                    <img src="./image/hamburger-icon.svg">
+                </figure>
+            </section>
+            <section class="sidebar-nav">
+                <section class="nav-header">
+                    <section class="header-logo">
+                        <figure>
+                            <img src="./image/logo-img.svg">
+                        </figure>
+                        <h1>United UI</h1>
+                    </section>
+                </section>
+                <section class="nav-search">
+                    <section class="search-container">
+                        <form class="content">
+                            <input class="content" type="search" placeholder="Search...">
+                        </form>
+                    </section>
+                </section>
+                <nav class="nav-menu">
+                    <section class="menu-list top">
+                        <a href="#"><img src="./image/home.svg"> Home</a>
+                        <a href="./admin.html"><img src="./image/bar-chart.svg"> Dashboards</a>
+                        <a href="#"><img src="./image/3-layers.svg"> Projects</a>
+                        <a href="#"><img src="./image/check-square.svg"> Tasks</a>
+                        <a href="#"><img src="./image/flag.svg"> Reportings</a>
+                        <a href="#"><img src="./image/users.svg"> Users</a>
+                    </section>
+                </nav>
+            </section>
+            <section class="sidebar-footer">
+                <nav class="nav-menu">
+                    <section class="menu-list">
+                        <a href="#"><img src="./image/bar-chart.svg"> Support</a>
+                        <a href="#"><img src="./image/settings.svg"> Settings</a>
+                    </section>
+                </nav>
+                <section class="card">
+                    <div class="progress-circle"></div>
+                    <section class="card-wrap">
+                        <h1>Used space</h1>
+                        <p>Your team has used 80% of your available space. Need more ?</p>
+                        <section class="card-action">
+                            <a href="#">Dismiss</a>
+                            <a href="#">Upgrade plan</a>
+                        </section>
+                    </section>
+                </section>
+                <hr>
+                <section class="account">
+                    <section class="account-content">
+                        <figure>
+                            <img src="./image/Avatar.svg">
+                        </figure>
+                        <div>
+                            <p>Olivia Rhye</p>
+                            <p>olivia@untitledui.com</p>
+                        </div>
+                    </section>
+                    <figure class="btn-icon">
+                        <a href="./login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                    </figure>
+                </section>
+            </section>
+        </section>
+    </header>
+    <main class="main-wrap">
+        <section class="main-section">
+            <section class="page-header top-header">
+                <section class="header-content top-content">
+                    <section class="header-wrap">
+                        <h1>Settings</h1>
+                    </section>
+                    <nav class="header-nav">
+                        <section class="nav-content">
+                            <section class="nav-content-menu">
+                                <a href="#">My details</a>
+                                <a href="#">Profile</a>
+                                <a href="#">Password</a>
+                                <a href="#">Team</a>
+                                <a href="#">Plan</a>
+                                <a href="#">Billing</a>
+                                <a href="#">Email</a>
+                                <a href="#">Notifications</a>
+                                <a href="#">Integrations</a>
+                                <a href="#">API</a>
+                            </section>
+                            <section class="nav-content-dropdown">
+                                <select class="nav-dropdown"> 
+                                    <option value="mydetails" selected> My details</option> 
+                                    <option value="profile"> Profile</option> 
+                                    <option value="password">Password</option>
+                                    <option value="team">Team</option>
+                                    <option value="plan">Plan</option>
+                                    <option value="billing">Billing</option>
+                                    <option value="email">Email</option>
+                                    <option value="notifications">Notifications</option>
+                                    <option value="integrations">Integrations</option>
+                                    <option value="api">API</option>
+                                </select>
+                            </section> 
+                        </section>
+                    </nav>
+                </section>
+            </section>
+            <section class="form-section">
+                <section class="form-content">
+                    <section class="page-header form-top-header">
+                        <section class="header-content form-top-content">
+                            <section class="header-wrap">
+                                <h1>Personal info</h1>
+                                <p>Update your photo and personal details here.</p>
+                            </section>
+                            <section class="header-action">
+                            </section>
+                        </section>
+                    </section>
+                    <section class="form-body">
+                        <form class="personal-form" id="profileForm">
+                        </form>
+
+                    </section>
+
+
+                    <!-- <table id="crudTable">
+                        <thead>
+                            <tr>
+                                <th>Fname</th>
+                                <th>Lname</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table> -->
+
+                   
+                </section>
+            </section>
+        </section>
+
+       
+        
+    </main>
+    <script async src="/js/edit.js"></script>
+</body>
+</html>
