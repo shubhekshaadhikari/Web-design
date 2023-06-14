@@ -1,0 +1,301 @@
+@import url(./admin.css);
+@import url(./signupstyle.css);
+.main-section{
+    background-color: var(--ghostwhite);
+}
+.top-header{
+    flex-direction: column;
+    padding: 0 32px;
+}
+.top-content{
+    flex-direction: column;
+    padding: 0;
+    gap: 24px;
+    border-bottom: 1px solid var(--whitegrey);
+}
+.header-wrap{
+    gap:20px;
+    padding: 0;
+}
+.header-wrap h1{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+}
+.header-nav{
+    align-self: stretch;
+}
+.nav-content{
+    display: flex;
+    align-items: flex-start;
+}
+.nav-content-menu{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+.nav-content-menu a{
+    display: flex;
+    padding: 5px 0px 16px ;
+    color: var(--lightgrey);
+    white-space: nowrap;
+}
+.nav-content-menu a:hover{
+    color: var(--purple);
+}
+.nav-content-menu a:focus{
+    color: var(--purple);
+    border-bottom: 2px solid var(--purple);
+}
+.nav-content-dropdown{
+    visibility: collapse;
+}
+.form-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 24px;
+    padding: 0 25px;
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    gap: 10px;
+}
+.form-content .form-top-header, .form-content .form-footer-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    padding-bottom: 20px;
+    gap: 0;
+    border-bottom: 1px solid var(--whitegrey);
+}
+.form-top-content{
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+}
+.form-top-content .header-wrap{
+    gap: 4px;
+}
+.form-top-content .header-wrap h1{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+}
+.form-top-content .header-wrap p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.form-footer-content{
+    display: flex;
+    padding: 0px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 0;
+}
+.form-footer-content .header-action{
+    padding-left: 30px;
+    /* width: 40%; */
+}
+.form-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding-top: 10px;
+}
+.personal-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+.personal-form .input-group{
+    flex-direction: row;
+    border-bottom: 1px solid var(--whitegrey);
+    padding-bottom: 20px;
+    max-height: fit-content;
+}
+.personal-form .input-group label{
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 0;
+}
+.personal-form .input-group .input-field{
+    width: 50%;
+}
+.personal-form .input-group .input-field::placeholder{
+    color: var(--lightgrey);
+}
+.input-row{
+    display: flex;
+    width: 50%;
+    gap: 20px;
+}
+.personal-form .input-group .labelAlert{
+    display: none;
+    position: relative; 
+    top: 45px; 
+    right: 560px; 
+    font-size: 12px ; 
+    color: red;
+}
+.photo .input-row{
+    display: flex;
+    width: 50%;
+    gap: 20px;
+}
+.photo .input-row figure{
+    width: 200px;
+    height: 100px;
+}
+#uploadedImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.photo .input-row figure{
+    width: 15%;
+}
+.label-next-line{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--lightgrey);
+}
+.upload-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+    width: 100%;
+    height: 170px;
+    border: 1px solid var(--offwhite);
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+}
+.upload-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 20px;
+}
+.upload-content .wrap{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.upload-content .wrap figure{
+    display: flex;
+    align-items: center;
+}
+.upload-content .wrap h1{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.upload-content .wrap h1 a{
+    font-weight: 600;
+    color: var(--darkpurple);
+}
+.upload-content .wrap p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+.input-group #country,.input-group #time{
+    color: var(--lightgrey);
+}
+.input-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 15px;
+}
+.text{
+    gap: 0px;
+}
+.inline-element{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.inline-element #style{
+    width: 60%;
+    color: var(--lightgrey);
+}
+.inline-element .side-list{
+    display: flex;
+    gap: 10px;
+}
+.inline-element .btn-icon i{
+   color: var(--lightgrey);
+}
+.portfolio-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.portfolio-section .card{
+    background-color: var(--white);
+    border: 1px solid var(--offwhite);
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.portfolio-section .card:hover{
+    border: 1px solid var(--darkpurple);
+}
+.portfolio-section .card .content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.portfolio-section .card .content .logo,
+.upload-container .upload-content .logo{
+    width: 32px;
+    height: 32px;
+    background: #F9F5FF;
+    padding: 2px;
+    border: 4px solid #F9F5FF;
+    border-radius: 28px;
+}
+.portfolio-section .card .content .wrap{
+    flex-direction: column;
+    white-space: nowrap;
+    align-items: flex-start;
+    width: 100%;
+}
+.portfolio-section .card .content .wrap h1{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--black);
+}
+.portfolio-section .card .content .wrap p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--lightgrey);
+}
+.portfolio-section .card .content .wrap progress{
+    margin-top: 30px;
+    width: 90%;
+}
+
+
