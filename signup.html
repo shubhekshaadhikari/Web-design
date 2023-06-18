@@ -16,32 +16,35 @@
 </head>
 <body>
     <header class="nav-bar">
-        <nav class="nav-container">
+        <nav class="nav-container" id="toggleNav">
             <section class="nav-content">
                 <section class="nav-logo">
-                    <section class="nav-logo-img">
+                    <figure class="nav-logo-img">
                         <img src="./image/logo-img.svg">
-                    </section>
+                    </figure>
                     <h1>United UI</h1>
+                    <figure id="closeIcon" class="btn-icon" onclick="closeNav()">
+                        <i class="fas fa-times"></i>
+                    </figure>
                 </section>
-                <section class="nav-menu">
-                    <a href="#" class="nav-btn">Home</a>
-                    <a href="#" class="nav-btn">Products<i class="fa-solid fa-angle-down"></i></a>
-                    <a href="#" class="nav-btn">Resources<i class="fa-solid fa-angle-down"></i></a>
-                    <a href="#" class="nav-btn">Pricing</a>
-                </section>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-btn">Home</a></li>
+                    <li><a href="#" class="nav-btn">Products<i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="#" class="nav-btn">Resources<i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="#" class="nav-btn">Pricing</a></li>
+                </ul>
             </section>
-            <section class="nav-side-menu">
+            <ul class="nav-side-menu">
                 <section class="sidemenu-list">
-                    <a href="./login.html" class="nav-side-btn">Log in</a>
+                    <a href="#" class="nav-side-btn">Log in</a>
                     <a href="./signup.html" class="nav-side-btn" id="purple">Sign up</a>
                 </section>
-                <section class="sidemenu-img">
+                <figure class="sidemenu-img" id="hamburgerIcon" onclick="openNav()">
                     <img src="./image/hamburger-icon.svg">
-                </section>
-            </section>
+                </figure>
+            </ul>
         </nav>
-    </header>
+    </header>  
     <main class="main-box">
         <section class="login-container">
             <section class="signup-header">
@@ -54,69 +57,81 @@
                 </section>
             </section>
             <section class="login-body">
-                <form class="login-form">
+                <form class="login-form" id="signupForm">
                     <section class="input-group">
                         <label for="fname">First Name</label>
-                        <input type="text" placeholder="Enter your first name" class="input-field">
+                        <input class="input-field" type="text" placeholder="Enter your first name" id="fname" name="fname" autocomplete="name">
+                        <span class="error-msg"></span>
                     </section>
                     <section class="input-group">
                         <label for="lname">Last Name</label>
-                        <input type="text" placeholder="Enter your last name" class="input-field">
+                        <input class="input-field" type="text" placeholder="Enter your last name" id="lname" name="lname" autocomplete="name">
+                        <span class="error-msg"></span>
                     </section>
                     <section class="input-group">
                         <label for="username">Username *</label>
-                        <input type="text" placeholder="Enter your username" class="input-field">
+                        <input class="input-field" type="text" placeholder="Enter your username" id="username" autocomplete="email" name="username">
+                        <span class="error-msg"></span>
                     </section>
                     <section class="input-group">
                         <label for="email">Email *</label>
-                        <input type="email" placeholder="name@example.com" class="input-field">
+                        <input class="input-field" type="email" placeholder="name@example.com" id="email" autocomplete="on" name="email">
+                        <span class="error-msg"></span>
                     </section>
-                    <section class="input-group">
+                    <section class="input-group ">
                         <label for="password">Password *</label>
-                        <input type="password" placeholder="........" class="input-field">
+                        <input class="input-field" type="password" placeholder="........" id="password" name="password">
+                        <span class="error-msg"></span>
+                        <span class="label-next-line">Must be at least 8 characters</span>
                     </section>
                     <section class="input-group">
-                        <label for="password">Confirm Password *</label>
-                        <input type="password" placeholder="........" class="input-field">
+                        <label for="cpassword">Confirm Password *</label>
+                        <input class="input-field" type="password" placeholder="........" id="cpassword" name="cpassword">
+                        <span class="error-msg"></span>
                     </section>
                     <section class="input-group">
                         <label for="dob">Date of Birth</label>
-                        <input type="date" class="input-field">
+                        <input class="input-field" type="date" id="dob" name="dob">
+                        <span class="error-msg"></span>
                     </section>
                     <section class="input-radio">
-                        <label for="gender">Gender</label>
-                        <input type="radio" name="gender" id="male">
-                        <label for="male">Female</label>
+                        <p>Gender</p>
                         <input type="radio" name="gender" id="female">
-                        <label for="female">Male</label>
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
                         <input type="radio" name="gender" id="other">
                         <label for="other">Others</label>
+                        <span class="error-msg"></span>
                     </section>
                     <section class="input-group">
                         <label for="city">Select City</label>
-                        <select name="city" id="city" class="input-field">
+                        <select name="city" id="city" class="input-field" name="city">
                             <option value="0">Kathmandu</option>
                             <option value="1">Lalitpur</option>
                             <option value="2">Bhaktapur</option>
                             <option value="3">Pokhara</option>
                             <option value="4">Nepalgunj</option>
                         </select>
+                        <span class="error-msg"></span>
                     </section>
-                    <section>
-                        <label for="textarea">Description</label>
-                        <textarea rows="7" cols="47" placeholder="Enter your text here...."></textarea>
+                    <section class="input-textarea">
+                        <label for="bio">Description</label>
+                        <textarea rows="7" cols="40" placeholder="Enter your text here...." id="bio"></textarea>
+                        <span class="error-msg"></span>
+                    </section>
+                    <section class="login-action">
+                        <button type="submit" class="signin btn">Create Account</button>
+                        <button type="button" class="signsocial btn"><img src="./image/google-icon.svg"> Sign up with Google</button>
                     </section>
                 </form>             
-                <section class="login-action">
-                    <a href="#" class="signin btn">Create Account</a>
-                    <a href="#" class="signsocial btn"><img src="./image/google-icon.svg" alt=""> Sign up with Google</a>
-                </section>
             </section>
-             <section class="footer-row">
+            <section class="footer-row">
                 <p>Already have an account? <a href="./login.html">Log in</a></p>
-             </section>       
+            </section>       
         </section>
     </main>
+    <script async src="./js/signup.js"></script>
 </body>
 </html>
 
