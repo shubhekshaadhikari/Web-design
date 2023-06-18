@@ -29,14 +29,20 @@
     width: 100%;
     min-height: 32px;
 }
-.nav-logo h1{
-    font-size: 20px;
-    font-weight: 600;
-}
-.nav-logo-img{
+.nav-logo-img {
     display: flex;
     align-items: flex-start;
     height: 100%;
+}
+.nav-logo h1{
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.nav-logo #closeIcon{
+    visibility: collapse;
+    position: absolute;
+    right: 20px;
 }
 .fa-angle-down{
     padding-left: 13px;
@@ -48,7 +54,31 @@
     align-items: center;
     gap: 22px;
     width: 100%;
-    min-height: 32px;
+    /* min-height: 32px; */
+}
+.nav-menu li, .nav-side-menu li{
+    list-style: none;
+}
+.nav-menu li .dropdown li{
+    visibility: collapse;
+    display: flex;
+}
+.nav-menu li .dropdown li:hover{
+    visibility: visible;
+}
+.dropdown:hover{
+    padding: 5px;
+}
+.list-4 {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    z-index: 10;
+}
+#drop-4:checked~ .list-4 {
+    visibility: visible;
+    opacity: 2;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
 }
 .nav-menu a, .nav-side-menu a{
     text-decoration: none;
@@ -152,7 +182,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    height: 70px;
+    max-height: fit-content;
     gap: 6px;
 }
 label{
@@ -173,6 +203,11 @@ label{
     border: 1px solid var(--offwhite);
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     border-radius: 8px;
+}
+input[type='password']::placeholder {
+    font-size: 20px;
+    position: relative;
+    bottom: 15%;
 }
 .row{
     display: flex;
@@ -211,11 +246,14 @@ label{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
     border: 1px solid var(--offwhite);
     border-radius: 8px;
     width: 100%;
     height: 44px;
     text-align: center;
+    white-space: nowrap;
+    font-size: 16px;
 }
 .signin{
     background-color: var(--purple);
@@ -290,6 +328,40 @@ label{
     .main-box{
         width: 100%;
         padding: 48px 16px;
+    }
+    /* toggle responsive pop box */
+    #toggleNav.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 60%;
+        z-index: 9999;
+        padding-top: 20px;
+        gap: 10px;
+    }
+    #toggleNav.active .nav-content{
+        visibility: visible;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    #toggleNav.active .nav-content .nav-menu{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+    }
+    #toggleNav.active .nav-side-menu {
+        visibility: visible;
+        flex-direction: column;
+    }
+    #toggleNav.active .nav-side-menu .sidemenu-list {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media screen and  (max-width: 480px)

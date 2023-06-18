@@ -571,7 +571,7 @@ progress {
     color: var(--black);
 }
 .col6{
-    width: 100px;/*yesma table ko icon milaunu parney xa, td max content bho bhaney bigrinxa */
+    width: 100px;
     display: flex;
     justify-content: space-evenly;
     padding: 10px 0;
