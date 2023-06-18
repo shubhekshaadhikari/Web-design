@@ -16,35 +16,36 @@
 </head>
 <body>
     <header class="nav-bar">
-        <nav class="nav-container">
+        <nav class="nav-container" id="toggleNav">
             <section class="nav-content">
                 <section class="nav-logo">
-                    <section class="nav-logo-img">
+                    <figure class="nav-logo-img">
                         <img src="./image/logo-img.svg">
-                    </section>
-                    <h1>UnitedUI</h1>
+                    </figure>
+                    <h1>United UI</h1>
+                    <figure id="closeIcon" class="btn-icon" onclick="closeNav()">
+                        <i class="fas fa-times"></i>
+                    </figure>
                 </section>
-                <section class="nav-menu">
-                    <a href="#" class="nav-btn">Home</a>
-                    <a href="#" class="nav-btn">Products<i class="fa-solid fa-angle-down"></i></a>
-                    <a href="#" class="nav-btn">Resources<i class="fa-solid fa-angle-down"></i></a>
-                    <a href="#" class="nav-btn">Pricing</a>
-                </section>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-btn">Home</a></li>
+                    <li><a href="#" class="nav-btn">Products<i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="#" class="nav-btn">Resources<i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="#" class="nav-btn">Pricing</a></li>
+                </ul>
             </section>
-            <section class="nav-side-menu">
+            <ul class="nav-side-menu">
                 <section class="sidemenu-list">
                     <a href="#" class="nav-side-btn">Log in</a>
                     <a href="./signup.html" class="nav-side-btn" id="purple">Sign up</a>
                 </section>
-                <section class="sidemenu-img">
+                <figure class="sidemenu-img" id="hamburgerIcon" onclick="openNav()">
                     <img src="./image/hamburger-icon.svg">
-                </section>
-            </section>
+                </figure>
+            </ul>
         </nav>
-    </header>
+    </header>    
 
-
-    
     <main class="main-box">
         <section class="login-container">
             <section class="login-header">
@@ -57,32 +58,34 @@
                 </section>
             </section>
             <section class="login-body">
-                <form class="login-form">
+                <form class="login-form" id="login">
                     <section class="input-group">
                         <label for="email">Email</label>
-                        <input type="email" placeholder="Enter your email" class="input-field">
+                        <input class="input-field" type="email" placeholder="Enter your email" id="email" name="email" required>
                     </section>
                     <section class="input-group">
                         <label for="password">Password</label>
-                        <input type="password" placeholder="" class="input-field">
+                        <input class="input-field" type="password" placeholder="........" id="password" name="password" required>
+                    </section>
+                    <section class="row">
+                        <div>
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember for 30 days</label>
+                        </div>
+                        <a href="#">Forget Password</a> 
+                    </section>                 
+                    <section class="login-action">
+                        <button type="button" class="signin btn" id="loginbtn">Log in</button>
+                        <button type="button" class="signsocial btn"><img src="./image/google-icon.svg"> Sign in with Google</button>
                     </section>
                 </form>
-                <section class="row">
-                    <div>
-                        <input type="checkbox">
-                        <label for="remember">Remember for 30 days</label>
-                    </div>
-                    <a href="#">Forget Password</a> 
-                </section>                 
-                <section class="login-action">
-                    <a href="./signup.html" class="signin btn">Sign in</a>
-                    <a href="#" class="signsocial btn"><img src="./image/google-icon.svg" alt=""> Sign in with Google</a>
-                </section>
             </section>
              <section class="footer-row">
                 <p>Don't have an account? <a href="./signup.html">Sign up</a></p>
              </section>       
         </section>
     </main>
+
+    <script src="./js/login.js"></script>
 </body>
 </html>
