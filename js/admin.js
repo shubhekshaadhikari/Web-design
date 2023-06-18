@@ -1,12 +1,29 @@
-// function openNav() {
-//   var x = document.getElementById("sidenav");
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
-// }
+//function to toggle hamburger icon and make responsive
+document.getElementById('closeIcon').style.visibility = 'hidden';
+                
+document.getElementById('hamburgerIcon').addEventListener('click', function() {
+    var sidebarNav = document.getElementById('toggleSidebar');
+    document.getElementById('hamburgerIcon').style.visibility = 'collapse';
+    document.getElementById('closeIcon').style.visibility = 'visible';
+    sidebarNav.classList.toggle('active');
+});
+document.getElementById('closeIcon').addEventListener('click', function() {
+    var sidebarNav = document.getElementById('toggleSidebar');
+    document.getElementById('hamburgerIcon').style.visibility = 'visible';
+    document.getElementById('closeIcon').style.visibility = 'collapse';
+    sidebarNav.classList.remove('active');
+});
 
+//after login sucessful display profile in login account
+let datas = localStorage.getItem("loginData"); 
+let dataArray;
+if(datas){
+      dataArray= JSON.parse(datas);
+}else{
+  dataArray=[];
+}
+document.getElementById('profileName').innerHTML = dataArray.fname + dataArray.lname;
+document.getElementById('profileEmail').innerHTML = dataArray.email;
 
 //keep value of key in object and convert into array
 let data = localStorage.getItem("peopleList"); 
@@ -27,7 +44,7 @@ function showData(){
   <td>
     <section class="col1">
       <figure>
-        ${ element.img } 
+       <img src="${ element.img }" alt="profile">
       </figure>
       <section>
             <h1>${ element.fname + " " + element.lname } </h1>
@@ -81,7 +98,7 @@ document.onload = showData();
 function addData(){
 
   window.addEventListener('DOMContentLoaded', function() {
-    const imageData = localStorage.getItem('imageData');
+    const imageData = localStorage.getItem('peopleList');
     if (imageData) {
       const imageElement = document.createElement('img');
       imageElement.src = imageData;

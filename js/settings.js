@@ -1,4 +1,22 @@
 "use strict"
+//hide update btn 
+document.getElementById('updatebtn').style.display ='none';
+
+//function to toggle hamburger icon and make responsive
+document.getElementById('closeIcon').style.visibility = 'hidden';
+                
+document.getElementById('hamburgerIcon').addEventListener('click', function() {
+    var sidebarNav = document.getElementById('toggleSidebar');
+    document.getElementById('hamburgerIcon').style.visibility = 'collapse';
+    document.getElementById('closeIcon').style.visibility = 'visible';
+    sidebarNav.classList.toggle('active');
+});
+document.getElementById('closeIcon').addEventListener('click', function() {
+    var sidebarNav = document.getElementById('toggleSidebar');
+    document.getElementById('hamburgerIcon').style.visibility = 'visible';
+    document.getElementById('closeIcon').style.visibility = 'collapse';
+    sidebarNav.classList.remove('active');
+});
 
 //mobile screeen change innercontent
 if(window.innerWidth <= 480){
@@ -18,47 +36,49 @@ document.getElementById('img').addEventListener('change', function(){
   }
 });
 
-
 // check number in text field function
-// function validateTextInput(input) {
-//   var textValue = input.value;
-//   var errorText = document.getElementById('errorText');
-
-//   var regex = /[0-9]/;
-
-//   if (regex.test(textValue)) {
-//     errorText.textContent = "Text cannot contain numbers.";
-//     input.classList.add('error');
+// function validateTextInput(input){
+//   var textValue = input.value.trim();
+//   var regex = /^[a-zA-Z]+$/;
+//   if (textValue === '' || !regex.test(textValue)){
+//     document.getElementsByClassName('labelAlert').style.display = 'block';
+//     document.getElementsByClassName('labelAlert').innerHTML = "Must enter text with maximum length 20" ;
 //   } else {
-//     errorText.textContent = "";
-//     input.classList.remove('error');
+//     document.getElementsByClassName('labelAlert').style.display = 'none';
 //   }
 // }
-function validateTextInput(input){
+
+function validateTextInput(input) {
   var textValue = input.value.trim();
   var regex = /^[a-zA-Z]+$/;
-  if (textValue === '' || !regex.test(textValue)){
-    document.getElementByClass('labelAlert').style.display = 'block';
+  var labelAlerts = document.getElementsByClassName('labelAlert');
+
+  if (textValue === '' || !regex.test(textValue)) {
+    for (var i = 0; i < labelAlerts.length; i++) {
+      labelAlerts[i].style.display = 'block';
+      labelAlerts[i].innerHTML = "Must enter text with maximum length 20";
+    }
   } else {
-    document.getElementByClass('labelAlert').style.display = 'none';
+    for (var i = 0; i < labelAlerts.length; i++) {
+      labelAlerts[i].style.display = 'none';
+    }
   }
 }
 
-document.getElementById('updatebtn').style.display ='none';
+
 
 //form data submit function 
 document.querySelector('#profileForm').addEventListener('submit', function(event) {
   event.preventDefault(); 
-
-
-document.getElementById('img').addEventListener('change', handleImageUpload);
+  
+  document.getElementById('img').addEventListener('change', handleImageUpload);
 
   function handleImageUpload(event) {
     const file = event.target.files[0];
     const reader = new FileReader();
     reader.onload = function() {
       const imageData = reader.result;
-      localStorage.setItem('imageData', imageData);
+      localStorage.setItem('peopleList', imageData);
     }
     reader.readAsDataURL(file);
   }
@@ -80,7 +100,6 @@ document.getElementById('img').addEventListener('change', handleImageUpload);
       fname: fname,
       lname: lname,
       email: email,
-      //img: img,
       img: imgDataUrl,
       role: role,
       country: country,
@@ -109,6 +128,7 @@ document.getElementById('img').addEventListener('change', handleImageUpload);
   };
 
   reader.readAsDataURL(imgFile);
+
 });
 
 
